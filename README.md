@@ -42,6 +42,9 @@
         volatile String company = "Allianz";
       ```
 - Operator
+  ```
+   + - * / % Math.pow(bilangan, pangkat) \
+  ```
 - IF
 - Switch
 - For Loop
