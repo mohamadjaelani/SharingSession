@@ -17,7 +17,7 @@
       - primitve : ```int, long, float, double, char, short, byte, boolean ```
       - non-primitve: ```String, Integer, Long, Float, Double, Array, Class```
     - Non-Numeric
-      ```String dan char```
+      ```String dan Character```
     - Collection
       ```Array```
 - Variable
