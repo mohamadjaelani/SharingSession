@@ -107,5 +107,13 @@
 	}
       ```
   - UI/GUI
+    ```
+    public void askToUser() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("silahkan masukan nama?");
+        String nama = scan.nextLine();
+        System.out.println("Hello " + nama);
+    }
+    ```
   - Socket
   
