@@ -49,3 +49,8 @@
 - Switch
 - For Loop
 - While Loop
+- I/O
+  - File
+  - UI/GUI
+  - Socket
+  
