@@ -51,6 +51,37 @@
 - While Loop
 - I/O
   - File
+    ```
+    private void useBuffer(){
+		String namafile = "file.txt";
+		File file = new File(namafile);
+		if(file.exists()) {
+			FileReader fileReader = new FileReader(file);
+			BufferedReader buffer = new BufferedReader(fileReader);
+			String tmp = "";
+			String result = "";
+			while((tmp=buffer.readLine())!= null) {
+				result += tmp +"\n";
+			}
+			System.out.println(result);
+		}
+	}
+
+    public void useScanner() {
+	    try {
+	      File file = new File("file.txt");
+	      Scanner scanner = new Scanner(file);
+	      String result = null;
+	      while (scanner.hasNextLine()) {
+	        result += scanner.nextLine()+"\n";
+	      }
+	      System.out.println(result);
+	      scanner.close();
+	    } catch (FileNotFoundException e) {
+	      e.printStackTrace();
+	    }
+	}
+    ```
   - UI/GUI
   - Socket
   
