@@ -106,7 +106,7 @@
 		}
 	}
       ```
-  - UI/GUI
+  - UI
     ```
     public void askToUser() {
         Scanner scan = new Scanner(System.in);
