@@ -106,13 +106,33 @@
 		}
 	}
       ```
-  - UI
+  - UI / GUI
     ```
     public void askToUser() {
         Scanner scan = new Scanner(System.in);
         System.out.println("silahkan masukan nama?");
         String nama = scan.nextLine();
         System.out.println("Hello " + nama);
+    }
+    public void gui() {
+        JFrame frame = new JFrame();
+        frame.setTitle("Hello");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+        JTextField te = new JTextField();
+        JButton btn = new JButton("OK");
+        JLabel lbl = new JLabel("Nama: ");
+        Dimension dim = new Dimension();
+        dim.height = 25;
+        dim.width = 150;
+        te.setPreferredSize(dim);
+        panel.add(lbl);
+        panel.add(te);
+        panel.add(btn);
+        frame.add(panel);
+        frame.setSize(500,150);
+        frame.setVisible(true);	
     }
     ```
   - Socket
