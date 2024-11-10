@@ -80,7 +80,16 @@
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
 	    }
-	}
+    }
+    public void useFileReader() throws IOException {
+		FileReader fr = new FileReader("file.txt");
+	    int i;
+	    String result = "";
+	    while ((i = fr.read()) != -1) {
+	    	System.out.print((char)i);
+	    }
+	    
+    }
     ```
   - UI/GUI
   - Socket
