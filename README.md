@@ -53,19 +53,19 @@
   - File
     ```
     private void useBuffer(){
-		String namafile = "file.txt";
-		File file = new File(namafile);
-		if(file.exists()) {
-			FileReader fileReader = new FileReader(file);
-			BufferedReader buffer = new BufferedReader(fileReader);
-			String tmp = "";
-			String result = "";
-			while((tmp=buffer.readLine())!= null) {
-				result += tmp +"\n";
-			}
-			System.out.println(result);
+	String namafile = "file.txt";
+	File file = new File(namafile);
+	if(file.exists()) {
+		FileReader fileReader = new FileReader(file);
+		BufferedReader buffer = new BufferedReader(fileReader);
+		String tmp = "";
+		String result = "";
+		while((tmp=buffer.readLine())!= null) {
+			result += tmp +"\n";
 		}
+		System.out.println(result);
 	}
+    }
 
     public void useScanner() {
 	    try {
