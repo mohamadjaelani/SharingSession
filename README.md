@@ -136,4 +136,34 @@
     }
     ```
   - Socket
-  
+- Spring boot
+  - Multi database connection
+	- application.properties
+	    ```
+		#first db
+		spring.datasource.url = [url]
+		spring.datasource.username = [username]
+		spring.datasource.password = [password]
+		spring.datasource.driverClassName = oracle.jdbc.OracleDriver
+		
+		#second db ...
+		spring.secondDatasource.url = [url]
+		spring.secondDatasource.username = [username]
+		spring.secondDatasource.password = [password]
+		spring.secondDatasource.driverClassName = oracle.jdbc.OracleDriver
+	    ```
+     	- Java configuration class
+        ```
+		@Bean(name = "datasource")
+		@ConfigurationProperties("spring.datasource")
+		@Primary
+		public DataSource dataSource(){
+		    return DataSourceBuilder.create().build();
+		}
+		
+		@Bean(name = "secondDatasource")
+		@ConfigurationProperties("spring.secondDatasource")
+		public DataSource dataSource2(){
+		    return DataSourceBuilder.create().build();
+		}
+        ```
